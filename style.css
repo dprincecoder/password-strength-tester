@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: rgb(214, 211, 211);
+}
+
+.container {
+	width: 400px;
+	height: 400px;
+	background-color: #fff;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px -1px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.meter{
+	position: relative;
+	height: 2rem;
+	width: 90%;
+	border: 2px solid hsl(261, 88%, 57%);
+	border-radius: 1rem;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#meter-range{
+	/* content: ''; */
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: calc(1% * var(--strength, 0));
+	background-color: hsl(261, 88%, 67%);
+	border-radius: 1rem;
+	transition: width 200ms;
+}
+
+h1{
+	text-transform: uppercase;
+	font-size: x-large;
+	color: hsl(261, 88%, 57%);
+	margin: 1rem;
+}
+
+.password-input{
+	margin: 1rem;
+	width: 80%;
+	border: none;
+	border-bottom: 1px solid black;
+	padding: 8px;
+	color: hsl(261, 88%, 57%);
+}
+
+.password-input:focus{
+	outline: 0;
+	border-bottom: 2px solid hsl(261, 88%, 57%);
+	transition: border 200ms;
+}
+
+.reasons > * {
+	padding: 5px;
+	text-transform: capitalize;
+}
